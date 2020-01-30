@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css?family=Niconne&display=swap" rel="stylesheet">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Quotes</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body class="body2">
+	<div class= "container2">
+		<div class="header">
+
+			<ul>
+				<li class="W">Welcome {{loggedUser.firstName}}</li>
+				<li class="logout"><a href="/logout">Logoff</a></li>
+			</ul>
+		</div>
+
+		<div class="box3">
+		<h2> Quotable Quotes</h2>
+		{% for quote in allquotes %}
+		{% if loggedUser == quote.creator %}<button class="button3"><a href="/quotes/{{quote.id}}/delete">Delete</a></button>{% endif %}  {% if loggedUser == quote.creator %}
+		
+		<button class="button4"><a href="/quotes/{{quote.id}}/edit">Edit</a></button>{% endif %}
+			<p class="quoter">{{quote.quoter}}:</p>
+			<p class="quote">{{quote.desc}}</p>
+			<p class="poster"> Posted by <a href="/users/{{quote.creator.id}}">{{quote.creator.firstName}}</a></p>
+			<button class="button5"><a href="/quotes/{{quote.id}}/add">Add to Favorites</a></button>
+			{% endfor %}
+		</div>
+
+		<div class="box4">
+		<h2>My Favorites </h2>
+
+		{% for quote in allfavorites %}
+			<p class="quoter">{{quote.quoter}}:</p>
+			<p class="quote">{{quote.desc}}</p>
+			<p class="post"> Posted by <a href="/users/{{quote.creator.id}}">{{quote.creator.firstName}}</a></p>
+			
+			<button class="button6"><a href="/quotes/{{quote.id}}/remove">Remove from Favorites</a></button>
+			{% endfor %}
+ 
+
+		</div>
+		<div class="box5">
+		<h2>Contribute a Quote</h2>
+		<form action="/createQuote" method="post">
+			{% csrf_token %}
+			Quoted By<p class="post1"><textarea name="quoter" placehoder = "" id="" cols="60" rows="3"></textarea></p>
+			Message<p class="post2"><textarea name="desc" id="" cols="60" rows="15"></textarea></p>
+			<input class = "button5" type="submit" value="post a quote">
+		</form>
+		{% if messages %}
+	<ul class="messages">    
+		{% for message in messages %}    
+		<li class="message">{{ message }}</li>    
+		{% endfor %}
+	</ul>
+{% endif %}
+		</div>
+	</div>  
+
+
+</body>
+</html>

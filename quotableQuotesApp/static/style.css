@@ -1,0 +1,231 @@
+.body1 {font-family: 'Niconne', cursive;
+    background-image: url("Orangebackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body2 {font-family: 'Niconne', cursive;
+    background-image: url("onTheCouch.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body3 {font-family: 'Niconne', cursive;
+    background-image: url("whiteBalls.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body4 {font-family: 'Niconne', cursive;
+    background-image: url("wheatField.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 25px;
+}
+
+* {
+    box-sizing: border-box;
+}
+.container1{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 0;
+    background-color: rgb(216, 159, 120);
+}
+.container2{
+    width: auto;
+    height: 1800px;
+    padding: 10px;
+    margin: 0;
+}
+.header{
+    width: auto;
+    height: 50px;
+	padding: 10px;
+    border: 1px solid blue;
+    background-color:orange; 
+}
+li {
+    list-style-type: none;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	
+}
+.p{
+    text-align: justify;
+}
+.logout,.dash{
+	float: right;
+}
+.W {
+margin-left: 1px;
+}
+.quoter{
+    color: blue;
+}
+.poster{
+    color: orangered;
+}
+li {
+    float: left;
+    margin: 0px 10px;
+}
+.button1{
+    width: 380px;
+    background-color: green;
+	border: none;
+	color: white;
+	padding: 15px 40px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+.button2{
+    width: 380px;
+    background-color:red;
+	border: none;
+	color: white;
+	padding: 15px 40px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 10px;
+    margin-top: 10px;
+}
+
+.button3{
+    background-color:lightgreen;
+    border: none;
+    color: white;
+    padding: 15px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 10px;
+}  
+
+.button4{
+    background-color: lightsalmon;
+    border: none;
+    color: white;
+    padding: 15px 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 10px;} 
+
+.button5{
+    background-color: lightsteelblue;
+    border: none;
+    color: black;
+    padding: 15px 130px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.button6{
+    background-color: yellow;
+    border: none;
+    color: black;
+    padding: 15px 120px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 10px;
+}  
+.button7{
+    background-color: lightseagreen;
+    border: none;
+    color: black;
+    padding: 15px 165px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 10px;
+}  
+
+.box1{
+	width: 700px;
+	padding: 15px;
+	/* border: 5px solid blue; */
+    margin: 10px;
+    display: inline-block;	
+    	
+}
+.box2{
+	width: 700px;
+	padding: 15px;
+	/* border: 5px solid brown; */
+    margin: 10px;
+    display: inline-block;
+    position: absolute;	
+}
+
+.box3{
+    position: relative;
+    width: 490px;
+    height: auto;
+    padding: 15px;
+	/* border: 5px solid blueviolet; */
+    display:inline-block;
+}	
+.box4{
+    position: relative;
+    width: 490px;
+    height: auto;
+    padding: 15px;
+	/* border: 5px solid yellow; */
+    display:inline-block; 
+    margin-left:70px;
+    position: absolute;	
+}
+.box5{
+    position: relative;
+	width: 490px;
+    padding: 15px;
+    height: auto;
+    /* border: 5px solid green; */
+    display: inline-block;
+    margin-left:630px;
+    position: absolute;	
+ 
+}
+.box6{
+    width: 700px;
+    height: 1000px;
+	padding: 15px 160px;
+	border: 1px solid brown;
+    margin: 10px;
+    display: inline-block;	
+    vertical-align: baseline;	
+}
+
+input[type=text], input[type=password]{ 
+	width: 380px;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
+    border-radius: 10px;
+}
+

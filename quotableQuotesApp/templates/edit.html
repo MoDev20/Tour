@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css?family=Niconne&display=swap" rel="stylesheet">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Edit Qoute</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'style.css' %}">  
+</head>
+<body class="body3">
+		<div class="header">
+				<ul>
+					<li>Hello {{loggedUser.firstName}},</li>
+					<li class="logout"><a href="/logout">Logoff</a></li>
+					<li class="dash"><a class="active" href="/quotes">Dashboard</a></li>
+				</ul>
+		</div>
+	<div class= "container2">	
+	<h1> Edit a qoute</h1>
+	
+	<form action="/updatequote/{{quote.id}}" method="post">
+	{% csrf_token %}
+		<p>Quoted By</p><input type="text" name="quoter">
+		<p>Message</p><textarea name="desc" id="" cols="70" rows="10"></textarea>
+		<br>
+		<input class = "button7" type="submit" value="submit">
+					
+	</form>
+	</div>
+</body>
+</html>
